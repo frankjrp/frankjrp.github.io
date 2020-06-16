@@ -1,6 +1,6 @@
 function onClick() {
     if (inputsAreEmpty()) {
-      label.textContent = 'Error: one or both inputs are empty.';
+      label.textContent = 'Erro: Um ou ambos os campos estão vazios!';
       return;
     }
     updateLabel();

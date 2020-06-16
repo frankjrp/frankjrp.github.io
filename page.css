@@ -1,0 +1,42 @@
+h1 {
+    text-align: center;
+}
+
+p {
+    color: darkblue;
+}
+
+input {
+    width: 200px;
+    height: 32px;
+    border: 2px solid;
+    border-radius: 4px;
+    margin-bottom: 1em;
+
+}
+
+label, input, button {
+    display: block;
+  }
+
+  legend#bt {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 210px
+  }
+
+  legend#bt button {
+    padding: 0;
+    border: 2px solid;
+    border-radius: 4px;
+    width: 100px;
+    height: 35px;
+    transition: background-color 400ms;
+
+  }
+
+  legend#bt button:hover {
+      background-color: rgb(173, 167, 167);
+  }
