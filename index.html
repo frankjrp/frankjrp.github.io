@@ -1,27 +1,40 @@
 <!doctype html>
-<html lang="pt_br">
+<html lang="pt-br">
     <head>
         <link rel="shortcut icon" href="/devtools-samples/favicon-96x96.png"/>
         <title>JavaScript</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./page.css">
     </head>
     <body>
+
         <h1>Exemplo simples de uma soma em JavaScript</h1>
 
+        <fieldset>
+
+            <div class="field-group">
+
+                <div class="field">
+
+                    <label for="num1">Número 1</label>
+                    <input placeholder="Número 1" id="num1">
+                    <br>
+                    <label for="num2">Número 2</label>
+                    <input placeholder="Númbero 2" id="num2">
+
+                </div>
+
+            </div>
+
+        </fieldset>
+
         <legend>
-            <label for="num1">Número 1</label>
-            <input placeholder="Número 1" id="num1">
-            <label for="num2">Número 2</label>
-            <input placeholder="Númbero 2" id="num2">
-        </legend>
-
-        <legend id=bt>
             <button>Somar</button>
+            <p></p>
         </legend>
 
-        <p></p>
         <script src="get-started.js"></script>
     </body>
 </html>
