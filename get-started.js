@@ -1,9 +1,14 @@
 function onClick() {
-  if (inputsAreEmpty()) {
-    label.textContent = 'Erro: Um ou ambos os campos estão vazios!';
+  if (input1.value == "") {
+    label.textContent = 'Preencha o campo "Número 1"';
     return;
+  } else if (input2.value == "") {
+    label.textContent = 'Preencha o campo "Número 2"';
+    return;
+  } else {
+    updateLabel();
+
   }
-  updateLabel();
 }
 
 function inputsAreEmpty() {
@@ -36,18 +41,18 @@ var button = document.querySelector('button');
 
 button.addEventListener('click', onClick);
 
-input1.addEventListener('keyup', function(event){
+input1.addEventListener('keyup', function (event) {
   if (event.keyCode === 13) {
     event.preventDefault();
     input2.focus();
-    input2.value="";
+    input2.value = "";
     label.textContent = "";
-   }
+  }
 })
 
-input2.addEventListener('keyup', function(event){
+input2.addEventListener('keyup', function (event) {
   if (event.keyCode === 13) {
     event.preventDefault();
     onClick();
-   }
+  }
 })
