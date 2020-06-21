@@ -1,43 +1,47 @@
 function onClick() {
   if (input1.value == "") {
     label.textContent = 'Preencha o campo "Número 1"';
+    input1.focus();
     return;
   } else if (input2.value == "") {
     label.textContent = 'Preencha o campo "Número 2"';
+    input2.focus();
     return;
   } else {
+    showMessage();
     updateLabel();
-
   }
 }
 
-function inputsAreEmpty() {
-  if (getNumber1() === '' || getNumber2() === '') {
-    return true;
-  } else {
-    return false;
-  }
+function showMessage() {
+  console.log("Testando uma mensagem. Soma: " + sumNumbers());
+
 }
 
 function updateLabel() {
-  var addend1 = getNumber1();
-  var addend2 = getNumber2();
-  var sum = parseInt(addend1) + parseInt(addend2);
-  label.textContent = addend1 + ' + ' + addend2 + ' = ' + sum;
+  label.textContent = getNumber1() + ' + ' + getNumber2() + ' = ' + sumNumbers();
+
+  input1.value = "";
+  input2.value = "";
+  input1.focus();
 }
 
 function getNumber1() {
-  return input1.value;
+  return parseInt(input1.value);
 }
 
 function getNumber2() {
-  return input2.value;
+  return parseInt(input2.value);
 }
 
-var input1 = document.querySelector('input[id=num1]');
-var input2 = document.querySelector('input[id=num2]');
-var label = document.querySelector('p');
-var button = document.querySelector('button');
+function sumNumbers() {
+  return getNumber1() + getNumber2();
+}
+
+const input1 = document.querySelector('input[id=num1]');
+const input2 = document.querySelector('input[id=num2]');
+const label = document.querySelector('p');
+const button = document.querySelector('button');
 
 button.addEventListener('click', onClick);
 
@@ -45,7 +49,6 @@ input1.addEventListener('keyup', function (event) {
   if (event.keyCode === 13) {
     event.preventDefault();
     input2.focus();
-    input2.value = "";
     label.textContent = "";
   }
 })
