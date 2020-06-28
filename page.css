@@ -1,75 +1,42 @@
+@import "https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap";
+
+:root {
+    --color-rocket: #7159c1;
+    --color-text: #faf3eb;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
 body {
-  display: flex;
-  flex-direction: column;
-  background-color: antiquewhite;
-
+    background-color: var(--color-rocket);
 }
 
-h1 {
+header {
+    padding: 30px;
+    border-bottom: 1px solid #e9d0af;
+    background: var(--color-rocket);
+    filter: brightness(80%);
+}
+
+header div {
     text-align: center;
-    font-family: 'Noto Sans JP', sans-serif;
-    font-size: 28px;
 }
 
-p {
-    color: darkblue;
-    font-size: 18px;
+header div a {
+    font-family: 'Roboto', sans-serif;
+    margin: 0 15px;
+    font-size: 20px;
+    text-decoration: none;
+    color: var(--color-text);
 }
 
-fieldset {
-  align-self: center;
-  width: 250px;
-  padding: 22px;
-  border-radius: 4px;
-  background-color: #ede2d4;
+header div a:hover {
+    color: var(--color-text);
+    text-decoration: underline;
+    filter: brightness(80%);
+    transition: color 400ms;
 }
-
-fieldset div.field {
-  display: flex;
-  flex-direction: column;
-  align-items: center ;
-
-}
-
-fieldset div.field legend#inputs {
-  display: flex;
-  flex-direction: column;
-  width: fit-content;
-  padding: 0;
-}
-
-fieldset div.field legend#inputs label {
-  margin-bottom: 2px;
-}
-
-fieldset div.field legend#inputs input {
-    width: 140px;
-    height: 32px;
-    border: 2px solid;
-    border-radius: 4px;
-    background-color: #f8f5f2;
-
-}
-
-  legend#button {
-    padding: 0;
-    margin-top: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
-
-  legend#button button {
-    padding: 0;
-    border: 2px solid;
-    border-radius: 4px;
-    width: 100px;
-    height: 35px;
-    transition: background-color 400ms;
-
-  }
-
-  legend#button button:hover {
-    background-color: #cecaca;
-  }
