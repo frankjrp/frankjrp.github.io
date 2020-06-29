@@ -13,5 +13,9 @@
         display: grid;
         gap: 60px 0;
     }
+
+    div legend p, ul {
+        padding: 0;
+    }
     
 }
