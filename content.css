@@ -4,7 +4,6 @@
     --color-rocket: #7159c1;
     --color-details: #e9d0af;
     --color-background: #a6a4a8;
-    --color-starter: rgb(113, 89, 193);
     --color-launchbase: rgb(253, 149, 31);
     --color-gostack: rgb(4, 211, 97);
 }
@@ -53,9 +52,22 @@ header h1 {
     align-content: space-between;
 }
 
-.card:hover {
-    border: 2px solid var(--color-details);
-    filter: brightness(102%);
+.card#starter:hover {
+    border: 2px solid var(--color-rocket);
+    border-radius: 6px;
+    filter: brightness(90%);
+}
+
+.card#launchbase:hover {
+    border: 2px solid var(--color-launchbase);
+    border-radius: 6px;
+    filter: brightness(90%);
+}
+
+.card#gostack:hover {
+    border: 2px solid var(--color-gostack);
+    border-radius: 6px;
+    filter: brightness(90%);
 }
 
 .card_image {
@@ -78,30 +90,24 @@ header h1 {
     font-size: 18px;
 }
 
-.card#starter .card_content p strong {
-    border-top: 2px solid var(--color-starter);
-    border-bottom: 2px solid var(--color-starter);
-    border-radius: 4px;
-}
-
-.card#launchbase .card_content p strong {
-    border-top: 2px solid var(--color-launchbase);
-    border-bottom: 2px solid var(--color-launchbase);
-    border-radius: 4px;
-}
-
-.card#gostack .card_content p strong {
-    border-top: 2px solid var(--color-gostack);
-    border-bottom: 2px solid var(--color-gostack);
-    border-radius: 4px;
-}
-
 .card_price {
-    background-color: var(--color-rocket);
-    filter: brightness(90%);
     padding: 10px;
     border-radius: 10px;
     margin-top: 10px;
+}
+
+.card#starter .card_price {
+    background: var(--color-rocket);
+}
+
+.card#launchbase .card_price {
+    background: var(--color-launchbase);
+    filter: brightness(90%);
+}
+
+.card#gostack .card_price {
+    background: var(--color-gostack);
+    filter: brightness(90%);
 }
 
 /* === MODAL === */
