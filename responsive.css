@@ -122,3 +122,10 @@
     }
     
 }
+
+@media (max-height: 430px) {
+    .mobile {
+        position: unset;
+        padding: 30px 0;
+    }
+}
