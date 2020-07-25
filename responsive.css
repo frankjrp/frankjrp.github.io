@@ -1,9 +1,82 @@
 @media (max-width: 900px) {
+
+    .mobile {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        display: none;
+    }
+
+    .mobile_links {
+        display: grid;
+        row-gap: 50px;
+        text-align: center;
+    }
+
+    .mobile_links a {
+        font-family: 'Roboto', sans-serif;
+        margin: 0 15px;
+        font-size: 20px;
+        text-decoration: none;
+        color: var(--color-text);
+    }
     
     .links {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 10px 0;
+        display: none;
+    }
+
+    .menu_mobile {
+        display: block;
+    }
+
+    #checkbox-menu{
+        position: absolute;
+        opacity: 0;
+      }
+
+    label{
+        cursor: pointer;
+        position: relative;
+        display: block;
+        height: 22px;
+        width: 30px;
+    }
+
+    label span{
+        position: absolute;
+        display: block;
+        height: 5px;
+        width: 100%;
+        border-radius: 30px;
+        background: #f16234;
+        transition: 0.25s ease-in-out;
+    }
+
+    label span:nth-child(1){
+        top: 0;
+    }
+      
+    label span:nth-child(2){
+        top: 8px;
+    }
+      
+    label span:nth-child(3){
+        top: 16px;
+    }
+
+    #checkbox-menu:checked + label span:nth-child(1){
+        transform: rotate(-45deg);
+        top: 8px;
+    }
+      
+      #checkbox-menu:checked + label span:nth-child(2){
+        opacity: 0;
+    }
+      
+      #checkbox-menu:checked + label span:nth-child(3){
+        transform: rotate(45deg);
+        top:8px;
     }
 
     .cards {
@@ -16,12 +89,29 @@
         gap: 60px 0;
     }
 
+    header {
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    header h1 {
+        padding: 0;
+    }
+
     header div a {
         margin: 0;
     }
 
     div legend p, ul {
         margin: 0 auto;
+    }
+
+    /* === MOBILE ACTIVE === */
+
+    .mobile.active {
+        display: flex;
+        background-color: #0e0a14ef;
     }
     
 }

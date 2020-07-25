@@ -13,6 +13,9 @@
 
 body {
     background-color: var(--color-rocket);
+    background-image: url("https://blog.rocketseat.com.br/content/images/2019/03/Construc-a-o.png");
+    background-repeat: no-repeat;
+    background-position: top;
 }
 
 header {
@@ -34,7 +37,8 @@ header div a {
     color: var(--color-text);
 }
 
-header div a:hover {
+header div a:hover,
+.mobile_links a:hover {
     color: var(--color-text);
     text-decoration: underline;
     filter: brightness(80%);
@@ -45,4 +49,9 @@ header div a:hover {
     width: 100%;
     height: 100%;
     padding: 20px 0;
+}
+
+.menu_mobile,
+.mobile {
+    display: none;
 }
