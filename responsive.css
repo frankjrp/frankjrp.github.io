@@ -150,10 +150,5 @@
     .mobile_links {
         row-gap: 25px;
     }
-
-    /* === DESCRIPTION.ACTIVE === */
-
-    .description.active {
-        margin-bottom: 0;
-    }
+    
 }

@@ -5,10 +5,8 @@ document.querySelector(".menu_mobile label").addEventListener("click", () => {
 
     if (menuMobile.checked) {
         document.querySelector(".mobile").classList.remove("active");
-        document.querySelector(".description").classList.remove("active");
     } else {
         document.querySelector(".mobile").classList.add("active");
-        document.querySelector(".description").classList.add("active");
     }
 })
 
