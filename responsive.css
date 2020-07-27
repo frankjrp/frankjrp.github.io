@@ -1,14 +1,22 @@
 @media (max-width: 900px) {
 
+    .description {
+        width: 90%;
+    }
+
     .mobile {
         position: fixed;
         right: 0;
         left: 0;
-        top: 63px;
+        top: 0;
         bottom: 0;
         align-items: center;
         justify-content: center;
         display: none;
+    }
+
+    .mobile_container {
+        padding-top: 60px;
     }
 
     .mobile_links {
@@ -100,6 +108,8 @@
         display: flex;
         justify-content: center;
         padding: 20px;
+        position: relative;
+        z-index: 1;
     }
 
     header h1 {
@@ -124,8 +134,26 @@
 }
 
 @media (max-height: 430px) {
+    body {
+        position: relative;
+    }
+
     .mobile {
-        position: unset;
-        padding: 30px 0;
+        position: absolute;
+        align-items: unset;
+    }
+
+    .mobile_container {
+        padding-top: 100px;
+    }
+
+    .mobile_links {
+        row-gap: 25px;
+    }
+
+    /* === DESCRIPTION.ACTIVE === */
+
+    .description.active {
+        margin-bottom: 0;
     }
 }
