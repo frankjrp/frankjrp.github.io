@@ -134,21 +134,16 @@
 }
 
 @media (max-height: 430px) {
-    body {
-        position: relative;
-    }
-
-    .mobile {
-        position: absolute;
-        align-items: unset;
-    }
-
-    .mobile_container {
-        padding-top: 100px;
-    }
 
     .mobile_links {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
         row-gap: 25px;
     }
-    
+
+    .mobile_links a {
+        padding: 0 20px;
+    }
+
 }
