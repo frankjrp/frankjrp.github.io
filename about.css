@@ -3,6 +3,7 @@
 :root {
     --color-rocket: #7159c1;
     --color-details: #e9d0af;
+    --color-header: #574399;
 }
 
 * {
@@ -17,8 +18,7 @@ body {
 }
 
 header {
-    background-color: var(--color-rocket);
-    filter: brightness(80%);
+    background-color: var(--color-header);
     border-bottom: 1px solid var(--color-details);
 }
 
@@ -52,7 +52,6 @@ header div legend img {
 
 header div legend h1 {
     color: var(--color-details);
-    filter: brightness(115%);
     font-size: 28px;
 }
 

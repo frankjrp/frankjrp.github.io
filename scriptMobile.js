@@ -1,12 +1,12 @@
 const menuMobile = document.getElementById("checkbox-menu")
-const links = document.querySelectorAll(".mobile_links a")
+const links = document.querySelectorAll("header nav li")
 
 document.querySelector(".menu_mobile label").addEventListener("click", () => {
 
     if (menuMobile.checked) {
-        document.querySelector(".mobile").classList.remove("active");
+        document.querySelector("header nav ul").classList.remove("active");
     } else {
-        document.querySelector(".mobile").classList.add("active");
+        document.querySelector("header nav ul").classList.add("active");
     }
 })
 

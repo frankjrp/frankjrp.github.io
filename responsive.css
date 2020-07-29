@@ -1,41 +1,42 @@
 @media (max-width: 900px) {
 
+    header nav ul {
+        position: fixed;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        display: none;
+        background: #0e0a14ef;
+        align-items: center;
+        justify-content: center;
+    }
+
+    header li + li {
+        margin-left: 0;
+        margin-top: 30px;
+    }
+
     .description {
         width: 90%;
     }
 
-    .mobile {
-        position: fixed;
-        right: 0;
-        left: 0;
-        top: 0;
-        bottom: 0;
-        align-items: center;
-        justify-content: center;
-        display: none;
+    .cards {
+        grid-template-columns: none;
     }
 
-    .mobile_container {
-        padding-top: 60px;
-    }
-
-    .mobile_links {
+    div legend#desc {
         display: grid;
-        row-gap: 50px;
-        text-align: center;
+        grid-template-columns: none;
+        gap: 60px 0;
     }
 
-    .mobile_links a {
-        font-family: 'Roboto', sans-serif;
-        margin: 0 15px;
-        font-size: 20px;
-        text-decoration: none;
-        color: var(--color-text);
+    div legend p, ul {
+        margin: 0 auto;
     }
-    
-    .links {
-        display: none;
-    }
+
+    /* === MENU === */
 
     .menu_mobile {
         display: block;
@@ -90,60 +91,31 @@
         top:8px;
     }
 
-    .cards {
-        grid-template-columns: none;
-    }
+    /* === MENU ACTIVE === */
 
-    div legend#header {
-        padding: 0;
-    }
-
-    div legend#desc {
-        display: grid;
-        grid-template-columns: none;
-        gap: 60px 0;
-    }
-
-    header {
+    header nav ul.active {
         display: flex;
-        justify-content: center;
-        padding: 20px;
+    }
+
+    /* === FOOTER === */
+    .footer-container {
         position: relative;
-        z-index: 1;
+        z-index: -1;
     }
 
-    header h1 {
-        padding: 0;
-    }
-
-    header div a {
-        margin: 0;
-    }
-
-    div legend p, ul {
-        margin: 0 auto;
-    }
-
-    /* === MOBILE ACTIVE === */
-
-    .mobile.active {
-        display: flex;
-        background-color: #0e0a14ef;
-    }
-    
 }
 
 @media (max-height: 430px) {
 
-    .mobile_links {
-        display: flex;
+    header nav ul {
         flex-flow: row wrap;
-        justify-content: center;
-        row-gap: 25px;
+        align-content: center;
+        row-gap: 30px;
     }
 
-    .mobile_links a {
+    header nav ul li {
         padding: 0 20px;
+        margin-top: 0;
     }
 
 }
