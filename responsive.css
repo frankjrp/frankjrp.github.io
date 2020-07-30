@@ -1,11 +1,7 @@
 @media (max-width: 900px) {
 
-    header nav {
-        flex-direction: row-reverse;
-    }
-
     header nav .image-container {
-        padding: 0 0 0 30px;
+        padding: 0 30px 0 0;
     }
 
     header nav ul {
