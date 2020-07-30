@@ -2,7 +2,7 @@
 
 :root {
     --color-rocket: #7159c1;
-    --color-text: #faf3eb;
+    --color-text: #d1cae8;
     --color-header: #574399;
 }
 
@@ -46,13 +46,11 @@ header nav ul a {
     font-size: 20px;
     text-decoration: none;
     color: var(--color-text);
-    filter: brightness(80%);
     font-weight: bold;
 }
 
 header nav ul a:hover {
-    color: var(--color-text);
-    filter: brightness(100%);
+    color: #a395d0;
     text-decoration: underline;
     transition: color 400ms;    
 }
