@@ -1,5 +1,13 @@
 @media (max-width: 900px) {
 
+    header nav {
+        flex-direction: row-reverse;
+    }
+
+    header nav .image-container {
+        padding: 0 0 0 30px;
+    }
+
     header nav ul {
         position: fixed;
         flex-direction: column;

@@ -29,6 +29,10 @@ header nav {
     padding: 20px;
 }
 
+header nav .image-container {
+    padding-right: 50px;
+}
+
 header nav ul {
     display: flex;
 }
