@@ -4,9 +4,9 @@ const links = document.querySelectorAll("header nav li")
 document.querySelector(".menu_mobile label").addEventListener("click", () => {
 
     if (menuMobile.checked) {
-        document.querySelector("header nav ul").classList.remove("active");
+        document.querySelector("header nav .navbar").classList.remove("active");
     } else {
-        document.querySelector("header nav ul").classList.add("active");
+        document.querySelector("header nav .navbar").classList.add("active");
     }
 })
 
