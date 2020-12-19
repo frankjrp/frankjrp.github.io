@@ -176,13 +176,12 @@
     header nav ul {
         flex-flow: row wrap;
         align-content: center;
-        row-gap: 50px;
+        row-gap: 30px;
         column-gap: 30px;
     }
 
     header nav ul li {
-        padding: 0 10px;
-        margin-top: 0;
+        width: unset;
     }
 
 }
