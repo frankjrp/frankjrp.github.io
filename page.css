@@ -13,8 +13,18 @@
     box-sizing: border-box;
 }
 
+html, body {
+    min-height: 100vh;
+}
+
 body {
     background-color: var(--color-rocket);
+}
+
+.page-flex {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 header {

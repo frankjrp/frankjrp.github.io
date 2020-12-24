@@ -1,5 +1,10 @@
 @media (max-width: 900px) {
 
+    header {
+        position: fixed;
+        width: 100%;
+    }
+
     header nav {
         justify-content: space-evenly;
     }
@@ -44,6 +49,7 @@
 
     .description {
         width: 90%;
+        margin-top: 110px;
     }
 
     .cards {
