@@ -1,6 +1,6 @@
 @media (max-width: 900px) {
 
-    header {
+    header.fixed {
         position: fixed;
         width: 100%;
     }
