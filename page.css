@@ -21,7 +21,7 @@ body {
     background-color: var(--color-rocket);
 }
 
-.page-flex {
+.container {
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -83,6 +83,10 @@ header li + li {
 
 .menu_mobile {
     display: none;
+}
+
+footer {
+    margin-top: auto;
 }
 
 .footer-container {
