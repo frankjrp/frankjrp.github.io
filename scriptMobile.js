@@ -10,8 +10,8 @@ document.querySelector(".menu_mobile label").addEventListener("click", () => {
     }
 })
 
-for (let link of links) {
+/* for (let link of links) {
     link.addEventListener("click", () => {
         menuMobile.checked = false;
     })
-}
+} */
