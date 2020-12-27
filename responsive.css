@@ -49,7 +49,7 @@
 
     header nav ul li::before,
     header nav ul li::after {
-        background: #281f47;
+        background: unset;
     }
 
     .description {
