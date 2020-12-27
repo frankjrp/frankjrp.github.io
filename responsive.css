@@ -52,11 +52,6 @@
         background: #281f47;
     }
 
-    header nav ul li:hover::before,
-    header nav ul li:hover::after {
-        background: unset;
-}
-
     .description {
         width: 90%;
         margin-top: 90px;
