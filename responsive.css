@@ -41,11 +41,15 @@
         width: 50%;
         padding: 8px 16px;
         border-radius: 8px;
-        background: #574399;
     }
 
     header nav ul li + li {
         margin-left: 0;
+    }
+
+    header nav ul li::before,
+    header nav ul li::after {
+        background: #281f47;
     }
 
     .description {

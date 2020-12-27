@@ -4,6 +4,7 @@
     --color-rocket: #7159c1;
     --color-text: #d1cae8;
     --color-header: #574399;
+    --color-detail: #e9d0af;
 }
 
 * {
@@ -28,7 +29,7 @@ body {
 }
 
 header {
-    border-bottom: 1px solid #e9d0af;
+    border-bottom: 1px solid var(--color-detail);
     background: var(--color-header);
 }
 
@@ -49,6 +50,37 @@ header nav ul {
 
 header li {
     list-style: none;
+    position: relative;
+    border: 3px solid var(--color-rocket);
+    border-radius: 6px;
+    transition: 200ms;
+    padding: 6px;
+}
+
+header li::before,
+header li::after {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 3px;
+    background: var(--color-header);
+    transform: skew(50deg);
+    transform: .4s linear;
+}
+
+header li::before {
+    top: -3px;
+    left: 10%;
+}
+
+header li::after {
+    bottom: -3px;
+    right: 10%;
+}
+
+header li:hover::before,
+header li:hover::after {
+    background: var(--color-detail);
 }
 
 header nav ul a {
