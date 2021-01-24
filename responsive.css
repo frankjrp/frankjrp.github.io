@@ -203,14 +203,14 @@
         column-gap: 30px;
     }
 
-    header nav ul li {
-        padding: 0 6px;
-    }
-
     header nav ul li,
     header nav ul li:first-child {
         width: unset;
         border: unset;
+        padding: unset;
+        border: 3px solid var(--color-rocket);
+        border-radius: 6px;
+        padding: 8px;
     }
 
 }
