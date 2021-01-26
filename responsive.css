@@ -41,19 +41,16 @@
     }
 
     header nav ul li {
-        width: 100%;
+        width: 95%;
         border: unset;
         border-bottom: 1px solid rgba(1,1,1,0.3);
         border-radius: unset;
         padding: 12px 0;
+        margin: 0 auto;
     }
 
     header nav ul li:last-child {
         border: unset;
-    }
-
-    header nav ul li + li {
-        margin-left: 0;
     }
 
     header nav ul li::before,
