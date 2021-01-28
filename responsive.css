@@ -206,11 +206,10 @@
     header nav ul li,
     header nav ul li:last-child {
         width: unset;
-        border: unset;
-        padding: unset;
         border: 3px solid var(--color-rocket);
         border-radius: 6px;
         padding: 8px;
+        margin: 0;
     }
 
     header nav .navbar .mobile {
