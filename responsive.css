@@ -21,7 +21,7 @@
         top: 0;
         left: 0;
         height: 100vh;
-        width: 86%;
+        width: 100vw;
         background: #281f47;
         overflow: hidden;
         transform: translateX(-100%); /* hide the menu on the right of the screen by default */
@@ -45,7 +45,7 @@
         border-bottom: 1px solid rgba(1,1,1,0.4);
         border-radius: unset;
         padding: 12px 0;
-        margin: 0 20px;
+        margin: 0 30px;
     }
 
     header nav ul li:last-child {
