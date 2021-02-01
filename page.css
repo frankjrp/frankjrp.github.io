@@ -83,7 +83,9 @@ header li:hover::after {
     background: var(--color-detail);
 }
 
-header nav ul a {
+header nav ul a,
+header nav ul.options li,
+header nav ul span {
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     text-decoration: none;
