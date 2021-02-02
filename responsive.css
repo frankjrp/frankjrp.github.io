@@ -105,12 +105,12 @@
 
     header nav ul li.options.open ul.options {
         display: block;
-        animation: alt 400ms ease-in-out;
+        animation: options 400ms ease-in-out;
     }
 
     /* === ANIMATION === */
 
-    @keyframes alt {
+    @keyframes options {
         from {
             transform: translateX(-100%);
         }
