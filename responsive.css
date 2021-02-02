@@ -18,7 +18,7 @@
     header nav .navbar {
         display: flex;
         position: fixed;
-        top: 61px;
+        top: 60px;
         bottom: 0;
         left: 0;
         height: 100vh;
@@ -32,7 +32,7 @@
     header nav .navbar .mobile {
         position: fixed;
         top: 0;
-        bottom: 61px;
+        bottom: 60px;
         width: 80%;
         background-color: #47367c;
         overflow: scroll;
