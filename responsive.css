@@ -22,20 +22,20 @@
         bottom: 0;
         left: 0;
         height: 100vh;
-        width: 100vw;
-        background: rgba(1,1,1,0.6);
+        background-color: unset;
         overflow: hidden;
-        transform: translateX(-100%); /* hide the menu on the right of the screen by default */
-        transition: transform 0.4s ease;
+        
     }
 
     header nav .navbar .mobile {
         position: fixed;
-        top: 0;
-        bottom: 60px;
+        top: 60px;
+        bottom: 0;
         width: 80%;
         background-color: #47367c;
         overflow: scroll;
+        transform: translateX(-100%); /* hide the menu on the right of the screen by default */
+        transition: transform 0.4s ease;
     }
 
     header nav ul:not(ul.options) {
@@ -196,6 +196,12 @@
     /* === MENU ACTIVE === */
 
     header nav .navbar.active {
+        width: 100vw;
+        background-color: rgba(1,1,1,0.6);
+        transition: 0.6s ease;
+    }
+
+    header nav .navbar.active .mobile {
         transform: translateX(0);
     }
 
