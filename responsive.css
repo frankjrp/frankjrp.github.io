@@ -2,6 +2,7 @@
 
     header.fixed {
         position: fixed;
+        height: 60px;
         width: 100%;
     }
 
@@ -18,19 +19,15 @@
     header nav .navbar {
         display: flex;
         position: fixed;
-        top: 60px;
         bottom: 0;
         left: 0;
-        height: 100vh;
+        height: calc(100% - 60px);
         background-color: unset;
         overflow: hidden;
         
     }
 
     header nav .navbar .mobile {
-        position: fixed;
-        top: 60px;
-        bottom: 0;
         width: 80%;
         background-color: #47367c;
         overflow: scroll;
@@ -198,7 +195,7 @@
     header nav .navbar.active {
         width: 100vw;
         background-color: rgba(1,1,1,0.6);
-        transition: 0.6s ease;
+        transition: background-color 0.6s ease;
     }
 
     header nav .navbar.active .mobile {
