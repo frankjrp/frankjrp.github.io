@@ -32,7 +32,6 @@
         bottom: 0;
         left: 0;
         height: calc(100% - 60px);
-        background-color: unset;
         width: 80%;
         background-color: #47367c;
         overflow: scroll;
