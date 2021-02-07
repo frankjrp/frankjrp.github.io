@@ -57,7 +57,7 @@ header p {
     cursor: pointer;
     background: var(--color-details);
     position: absolute;
-    transition: all .2s ease-in-out;
+    transition: transform 0.5s ease-in-out;
     right: 0px;
     top: 50%;
     height: 1px;
@@ -68,27 +68,25 @@ header p {
     transform: rotate(-90deg);
 }
 
+.faq .question .height {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+}
+
 .faq .question .answer {
     margin: 0 30px;
     font-size: 18px;
     letter-spacing: 0.75px;
     text-align: justify;
     padding-bottom: 20px;
-    display: none;
 }
 
-.faq .question.open .answer {
-    display: block;
-    animation: alt 500ms ease-in-out;
-}
+/* === FAQ OPEN === */
 
-@keyframes alt {
-    from {
-        transform: translateY(25px);
-    }
-    to {
-
-    }
+.faq .question.open .height {
+    max-height: 400px;
+    transition: max-height 1s ease-in-out;
 }
 
 .footer-container {
