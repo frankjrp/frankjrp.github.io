@@ -57,7 +57,7 @@ header p {
     cursor: pointer;
     background: var(--color-details);
     position: absolute;
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.3s ease-in-out;
     right: 0px;
     top: 50%;
     height: 1px;
@@ -85,7 +85,7 @@ header p {
 /* === FAQ OPEN === */
 
 .faq .question.open .height {
-    max-height: 400px;
+    max-height: 600px;
     transition: max-height 1s ease-in-out;
 }
 
