@@ -258,8 +258,11 @@
 
 @media (max-height: 430px) {
 
-    header nav .navbar .mobile {
-        width: 60%;
+    header nav .mobile {
+        left: unset;
+        right: 0;
+        width: 55%;
+        transform: translateX(100%);
     }
 
 }
