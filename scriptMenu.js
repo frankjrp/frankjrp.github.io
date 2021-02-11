@@ -7,4 +7,14 @@ for (let i = 0; i < options.length; i++) {
 
     })
 
+    options[i].querySelector("span").addEventListener("mouseenter", () => {
+        options[i].classList.add("open");
+
+    })
+
+    options[i].querySelector("ul.options").addEventListener("mouseleave", () => {
+        options[i].classList.remove("open");
+
+    })
+
 }

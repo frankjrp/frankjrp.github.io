@@ -48,6 +48,25 @@ header nav ul {
     display: flex;
 }
 
+header nav ul.options {
+    position: absolute;
+    left: 0;
+    flex-direction: column;
+    width: max-content;
+    top: 60px;
+    background-color: var(--color-header);
+    padding: 8px;
+    display: none;
+}
+
+header nav ul.options li {
+    border: none;
+}
+
+header nav li.options span {
+    cursor: pointer;
+}
+
 header li {
     list-style: none;
     position: relative;
@@ -55,6 +74,19 @@ header li {
     border-radius: 6px;
     transition: 200ms;
     padding: 6px;
+}
+
+header nav ul li span::after {
+    width: 0;
+    height: 0;
+    border: 7px solid transparent;
+    border-bottom: none;
+    border-top-color: #efa585;
+    content: '';
+    vertical-align: middle;
+    display: inline-block;
+    margin-left: 4px;
+    transition: 400ms;
 }
 
 header li::before,
@@ -83,6 +115,11 @@ header li:hover::after {
     background: var(--color-detail);
 }
 
+header ul.options li::before,
+header ul.options li::after {
+    content: unset;
+}
+
 header nav ul a,
 header nav ul.options li,
 header nav ul span {
@@ -93,14 +130,27 @@ header nav ul span {
     font-weight: bold;
 }
 
-header nav ul a:hover {
+header nav ul a:hover,
+header nav ul span:hover {
     color: #a395d0;
     text-decoration: underline;
     transition: color 400ms;    
 }
 
-header li + li {
+header li + li:not(ul.options li + li) {
     margin-left: 20px;
+}
+
+/* === MENU OPTIONS OPENED */
+
+header nav ul li.options.open span::after {
+    transform: rotate(180deg);
+    transition: 400ms;
+}
+
+header nav ul li.options.open ul.options {
+    display: block;
+    animation: options 400ms ease-in-out;
 }
 
 .description {
