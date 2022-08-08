@@ -1,10 +1,14 @@
 const questions = document.querySelectorAll(".question")
 
-for (let i = 0; i < questions.length; i++) {
+questions.forEach((question) => {
+    question.querySelector("h2").addEventListener("click", () => {
+        question.classList.toggle("open")
 
-    questions[i].querySelector("h2").addEventListener("click", () => {
-        questions[i].classList.toggle("open");
+        let content = question.querySelector(".height")
 
+        question.classList.contains("open") ?
+            content.style.maxHeight = content.scrollHeight + "px"
+            :
+            content.style.maxHeight = null
     })
-
-}
+})

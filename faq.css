@@ -82,13 +82,6 @@ header p {
     padding-bottom: 20px;
 }
 
-/* === FAQ OPEN === */
-
-.faq .question.open .height {
-    max-height: 600px;
-    transition: max-height 1s ease-in-out;
-}
-
 .footer-container {
     background-color: var(--color-rocket);
     filter: brightness(80%);
