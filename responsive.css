@@ -258,6 +258,26 @@
 
 }
 
+@media (min-width: 600px) {
+
+    header nav .menu {
+        left: unset;
+        right: 0;
+        max-width: 0;
+        max-height: unset;
+        width: 30%;
+        transition: max-width 0.5s ease-in-out;
+    }
+
+    /* === MENU ACTIVE === */
+
+    header nav .menu.active {
+        max-width: 100%;
+        transition: max-width 0.5s ease-in-out;
+    }
+
+}
+
 /* === GRID TEMPLATE AREAS === */
 
 @media (min-width: 400px) {

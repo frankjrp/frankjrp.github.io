@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --color-rocket: #7159c1;
+    --color-text: #d1cae8;
+    --color-header: #574399;
+    --color-detail: #e9d0af;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    min-height: 100vh;
+}
+
+body {
+    background-color: var(--color-rocket);
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    border-bottom: 1px solid var(--color-detail);
+    background: var(--color-header);
+}
+
+header.fixed {
+    position: fixed;
+    height: 60px;
+    width: 100%;
+}
+
+header nav .menu {
+    position: fixed;
+    top: 60px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    max-height: 0;
+    background-color: #47367c;
+    overflow-y: scroll;
+    transition: max-height 0.5s ease-in-out;
+}
+
+header nav ul:not(ul.options) {
+    flex-flow: column nowrap;
+    border-left: 3px solid var(--color-detail);
+    margin: 25px 0;
+}
+
+header nav ul li {
+    border: unset;
+    border-bottom: 1px solid rgba(1,1,1,0.4);
+    border-radius: unset;
+    padding: 12px 0;
+    margin-left: 17px;
+    margin-right: 20px;
+}
+
+header nav ul li:last-child {
+    border: unset;
+}
+
+header nav ul li::before,
+header nav ul li::after {
+    background: unset;
+}
+
+header li:hover::before,
+header li:hover::after {
+    background: unset;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+header nav ul {
+    display: flex;
+}
+
+header li {
+    list-style: none;
+    position: relative;
+    border: 3px solid var(--color-rocket);
+    border-radius: 6px;
+    transition: 200ms;
+    padding: 6px;
+}
+
+header nav ul li span::after {
+    width: 0;
+    height: 0;
+    border: 7px solid transparent;
+    border-bottom: none;
+    border-top-color: #efa585;
+    content: '';
+    vertical-align: middle;
+    display: inline-block;
+    margin-left: 4px;
+    transition: 400ms;
+}
+
+header ul.options li::before,
+header ul.options li::after {
+    content: unset;
+}
+
+header nav ul a,
+header nav ul.options li,
+header nav ul span {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+    color: var(--color-text);
+    font-weight: bold;
+}
+
+header nav ul a:hover,
+header nav ul span:hover {
+    color: #a395d0;
+    text-decoration: underline;
+    transition: color 400ms;
+}
+
+header li+li:not(ul.options li + li) {
+    margin-left: 20px;
+}
+
+/* === MENU === */
+
+.menu_mobile {
+    display: block;
+}
+
+#checkbox-menu {
+    position: absolute;
+    opacity: 0;
+}
+
+label {
+    cursor: pointer;
+    position: relative;
+    display: block;
+    height: 22px;
+    width: 30px;
+}
+
+label span {
+    position: absolute;
+    display: block;
+    height: 5px;
+    width: 100%;
+    border-radius: 30px;
+    background: #f16234;
+    transition: 0.25s ease-in-out;
+}
+
+label span:nth-child(1) {
+    top: 0;
+}
+
+label span:nth-child(2) {
+    top: 8px;
+}
+
+label span:nth-child(3) {
+    top: 16px;
+}
+
+#checkbox-menu:checked+label span:nth-child(1) {
+    transform: rotate(-45deg);
+    top: 8px;
+}
+
+#checkbox-menu:checked+label span:nth-child(2) {
+    opacity: 0;
+}
+
+#checkbox-menu:checked+label span:nth-child(3) {
+    transform: rotate(45deg);
+    top: 8px;
+}
+
+/* === END MENU === */
+
+.description {
+    width: 800px;
+    margin: 80px auto;
+}
+
+.description p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    color: black;
+    text-align: justify;
+}
+
+footer {
+    margin-top: auto;
+}
+
+.footer-container {
+    background-color: var(--color-rocket);
+    filter: brightness(80%);
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.footer-container p {
+    font-family: 'Roboto', sans-serif;
+    color: var(--color-text);
+    font-size: 14px;
+    line-height: 16px;
+}
+
+/* === MENU ACTIVE === */
+
+header nav .menu.active {
+    max-height: 100%;
+    transition: max-height 0.5s ease-in-out;
+}
+
+.footer-container.hide {
+    opacity: 0;
+}
+
+/* === MENU OPTIONS === */
+
+header nav ul.options {
+    position: unset;
+    width: unset;
+    background-color: unset;
+    padding: unset;
+    margin-top: 10px;
+    display: none;
+}
+
+header nav ul.options li {
+    font-size: 16px;
+    filter: brightness(90%);
+    border: unset;
+    padding: 8px 0;
+}
+
+header nav ul.options li:last-child {
+    padding-bottom: unset;
+}
+
+/* === MENU OPTIONS OPENED */
+
+/* === ANIMATION === */
+
+@keyframes options {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+header nav ul li.options.open span::after {
+    transform: rotate(180deg);
+    transition: 400ms;
+}
+
+header nav ul li.options.open ul.options {
+    display: block;
+    animation: options 400ms ease-in-out;
+}
