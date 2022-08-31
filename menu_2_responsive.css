@@ -1,0 +1,14 @@
+@media (max-width: 500px) {
+
+    header nav {
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 900px) {
+
+    .description {
+        width: 90%;
+        margin-top: 90px;
+    }
+}
