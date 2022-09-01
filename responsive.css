@@ -19,43 +19,57 @@
     header nav .navbar {
         display: flex;
         position: fixed;
+        top: 60px;
         bottom: 0;
         left: 0;
-        height: calc(100% - 60px);
-        background-color: unset;
+        right: 0;
         overflow: hidden;
-        
+        transition: background-color 0.4s ease-out;
+        animation: closed 0s ease-in-out 0.7s forwards;
     }
 
-    header nav .mobile {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        height: calc(100% - 60px);
-        width: 80%;
-        background-color: #47367c;
+    header nav .navbar .mobile {
+        width: 100%;
         overflow: scroll;
-        transform: translateX(-100%); /* hide the menu on the right of the screen by default */
-        transition: transform 0.4s ease;
+        transform: translateY(15%);
+        transition: transform 0.5s ease-out;
+    }
+
+    header nav .navbar .mobile ul {
+        opacity: 0;
+        transition: opacity 0.5s;
     }
 
     header nav ul:not(ul.options) {
         flex-flow: column nowrap;
-        border-left: 3px solid var(--color-detail);
-        margin: 25px 0;
+        row-gap: 22px;
+        text-align: center;
+        padding: 45px 0;
     }
 
     header nav ul li {
         border: unset;
-        border-bottom: 1px solid rgba(1,1,1,0.4);
         border-radius: unset;
-        padding: 12px 0;
-        margin-left: 17px;
-        margin-right: 20px;
+        padding: unset;
+    }
+
+    header nav ul li > a,
+    header nav ul li > span {
+        background: #3e2f6a;
+        padding: 6px 12px;
+        border-radius: 10px;
     }
 
     header nav ul li:last-child {
         border: unset;
+    }
+
+    header li + li:not(ul.options li + li) {
+        margin-left: 0;
+    }
+
+    header nav .menu ul > li {
+        margin: 0;
     }
 
     header nav ul li::before,
@@ -100,7 +114,7 @@
         animation: options 400ms ease-in-out;
     }
 
-    /* === ANIMATION === */
+    /* === ANIMATIONS === */
 
     @keyframes options {
         from {
@@ -108,6 +122,24 @@
         }
         to {
             transform: translateX(0);
+        }
+    }
+
+    @keyframes closed {
+        from {
+            max-width: 100%;
+        }
+        to {
+            max-width: 0;
+        }
+    }
+
+    @keyframes opened {
+        from {
+            max-width: 0;
+        }
+        to {
+            max-width: 100%;
         }
     }
 
@@ -188,13 +220,18 @@
     /* === MENU ACTIVE === */
 
     header nav .navbar.active {
-        width: 100vw;
-        background-color: rgba(1,1,1,0.6);
-        transition: background-color 0.6s ease;
+        animation: opened;
+        background-color: #47367c;
+        transition: background-color 0.4s ease-out;
     }
 
-    header nav .navbar.active + .mobile {
-        transform: translateX(0);
+    header nav .navbar.active > .mobile {
+        transform: translateY(0);
+    }
+
+    header nav .navbar.active .mobile ul {
+        opacity: 1;
+        transition: opacity 0.5s;
     }
 
     /* === FOOTER === */
@@ -247,17 +284,6 @@
     }
 }
 
-@media (max-height: 430px) {
-
-    header nav .mobile {
-        left: unset;
-        right: 0;
-        width: 55%;
-        transform: translateX(100%);
-    }
-
-}
-
 @media (min-width: 600px) {
 
     header nav .menu {
@@ -265,7 +291,7 @@
         right: 0;
         max-width: 0;
         max-height: unset;
-        width: 30%;
+        width: 50%;
         transition: max-width 0.5s ease-in-out;
     }
 

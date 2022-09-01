@@ -58,13 +58,12 @@ header nav ul:not(ul.options) {
     margin: 25px 0;
 }
 
-header nav ul li {
+header nav ul > li {
     border: unset;
     border-bottom: 1px solid rgba(1,1,1,0.4);
     border-radius: unset;
     padding: 12px 0;
-    margin-left: 17px;
-    margin-right: 20px;
+    margin: 0 20px;
 }
 
 header nav ul li:last-child {
@@ -134,10 +133,6 @@ header nav ul span:hover {
     color: #a395d0;
     text-decoration: underline;
     transition: color 400ms;
-}
-
-header li+li:not(ul.options li + li) {
-    margin-left: 20px;
 }
 
 /* === MENU === */

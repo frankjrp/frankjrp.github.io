@@ -1,22 +1,25 @@
 const menuMobile = document.getElementById("checkbox-menu")
 const links = document.querySelectorAll("header nav ul li a")
 const menu = document.querySelector("header nav .menu")
+const navbar = document.querySelector("header nav .navbar")
+const footer = document.querySelector("footer .footer-container")
 
 document.querySelector(".menu_mobile label").addEventListener("click", () => {
 
     if (menuMobile.checked) {
-        document.querySelector("footer .footer-container").classList.remove("hide")
+        footer.classList.remove("hide")
         menu ? menu.classList.remove("active") : null
-        document.querySelector("header nav .navbar").classList.remove("active");
+        navbar.classList.remove("active")
     } else {
-        document.querySelector("footer .footer-container").classList.add("hide")
+        footer.classList.add("hide")
         menu ? menu.classList.add("active") : null
-        document.querySelector("header nav .navbar").classList.add("active");
+        navbar.classList.add("active")
     }
 })
 
-for (let link of links) {
+links.forEach((link) => {
     link.addEventListener("click", () => {
         menuMobile.checked = false;
+        navbar.classList.remove("active")
     })
-}
+})
