@@ -76,6 +76,10 @@ header li {
     padding: 6px;
 }
 
+[class^="ph-"], [class*=" ph-"] {
+    display: none;
+}
+
 header nav ul li span::after {
     width: 0;
     height: 0;
@@ -124,7 +128,7 @@ header nav ul a,
 header nav ul.options li,
 header nav ul span {
     font-family: 'Roboto', sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     text-decoration: none;
     color: var(--color-text);
     font-weight: bold;

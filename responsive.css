@@ -42,8 +42,8 @@
 
     header nav ul:not(ul.options) {
         flex-flow: column nowrap;
-        row-gap: 22px;
-        text-align: center;
+        row-gap: 12px;
+        align-items: center;
         padding: 45px 0;
     }
 
@@ -55,9 +55,36 @@
 
     header nav ul li > a,
     header nav ul li > span {
+        display: flex;
+        align-items: center;
+        column-gap: 6px;
+        font-size: 20px;
         background: #3e2f6a;
         padding: 6px 12px;
         border-radius: 10px;
+    }
+
+    header nav ul a:hover,
+    header nav ul span:hover {
+        color: #d1cae8;
+    }
+
+    header nav ul li > span:hover {
+        text-decoration: none;
+    }
+
+    header nav .mobile ul li > span::after {
+        content: unset;
+    }
+
+    header nav ul li span > i {
+        transition: 400ms;
+    }
+
+    header nav ul.options li > a {
+        background: unset;
+        padding: unset;
+        font-size: 18px;
     }
 
     header nav ul li:last-child {
@@ -72,6 +99,10 @@
         margin: 0;
     }
 
+    [class^="ph-"], [class*=" ph-"] {
+        display: inline-flex;
+    }
+
     header nav ul li::before,
     header nav ul li::after {
         background: unset;
@@ -80,38 +111,54 @@
     header li:hover::before,
     header li:hover::after {
         background: unset;
-}
+    }
+
+    header nav ul li.options {
+        display: flex;
+        flex-direction: column;
+        row-gap: 14px;
+        align-items: center;
+    }
 
     header nav ul.options {
         position: unset;
         width: unset;
         background-color: unset;
         padding: unset;
-        margin-top: 10px;
-        display: none;
+        align-items: center;
+        row-gap: 10px;
     }
 
     header nav ul.options li {
-        font-size: 16px;
+        font-size: 18px;
         filter: brightness(90%);
         border: unset;
-        padding: 8px 0;
     }
 
     header nav ul.options li:last-child {
         padding-bottom: unset;
     }
 
+    header nav ul li.hide {
+        display: none;
+    }
+
     /* === MENU OPTIONS OPENED */
 
-    header nav ul li.options.open span::after {
-        transform: rotate(180deg);
+    header nav ul li.options.open span > i {
+        transform: rotate(135deg);
         transition: 400ms;
     }
 
     header nav ul li.options.open ul.options {
-        display: block;
-        animation: options 400ms ease-in-out;
+        display: flex;
+    }
+
+    header nav ul li.options.open span {
+        color: #a395d0;
+        border-radius: 0;
+        width: 100vw;
+        justify-content: center;
     }
 
     /* === ANIMATIONS === */
@@ -158,7 +205,8 @@
         gap: 60px 0;
     }
 
-    div legend p, ul {
+    div legend#desc p,
+    div legend#desc ul {
         margin: 0 auto;
     }
 

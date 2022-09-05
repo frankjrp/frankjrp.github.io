@@ -1,10 +1,25 @@
 const options = document.querySelectorAll("header nav ul li.options")
 
-for (let i = 0; i < options.length; i++) {
+options.forEach((option) => {
+    option.querySelector("span").addEventListener("click", () => {
+        option.classList.toggle("open");
 
-    options[i].querySelector("span").addEventListener("click", () => {
-        options[i].classList.toggle("open");
+        const itens = document.querySelectorAll("header nav ul li:not(.open):not(.options ul li)")
+
+        option.classList.contains("open") ?
+            (
+                itens.forEach((item) => {
+                    item.classList.add("hide")
+
+                })
+            )
+            :
+            (
+                itens.forEach((item) => {
+                    item.classList.remove("hide")
+
+                })
+            )
 
     })
-
-}
+})
