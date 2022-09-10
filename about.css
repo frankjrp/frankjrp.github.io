@@ -10,6 +10,7 @@
     margin: 0;
     padding: 0;
     border: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -22,40 +23,56 @@ header {
     border-bottom: 1px solid var(--color-details);
 }
 
-div legend {
+header div {
     padding: 15px;
 }
 
-div legend#header {
+header div.header {
     display: flex;
     align-items: center;
     column-gap: 20px;
     justify-content: center;
 }
 
-div legend#desc {
+div.wrapper {
+    display: grid;
+    row-gap: 30%;
+}
+
+div.content {
+    display: flex;
+    justify-content: center;
+}
+
+div.desc {
     margin: 40px 0;
-    display: inline-flex;
+    display: grid;
     grid-template-columns: 1fr 1fr;
-    justify-content: space-evenly;
+    column-gap: 25px;
+    padding: 14px;
 }
 
-div legend#links {
-    text-align: center;
-}
-
-header div legend img {
+header div.header img {
     border-radius: 50%;
     height: 70px;
     border: 2px solid var(--color-details);
 }
 
-header div legend h1 {
+header div.header h1 {
     color: var(--color-details);
     font-size: 28px;
 }
 
-div legend p, ul {
+div.techs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 25px;
+}
+
+div.desc p,
+div.desc ul,
+div.desc span {
     text-align: justify;
     max-width: 450px;
     font-size: 18px;
@@ -64,14 +81,21 @@ div legend p, ul {
     color: black;
 }
 
-legend#links a {
-    padding: 20px;
+div.links {
+    display: flex;
+    gap: 20px;
+    padding-bottom: 20px;
+    margin: 0 auto;
+}
+
+div.links a {
+    font-size: 16px;
     color: black;
     filter: brightness(80%);
     text-decoration: none;
 }
 
-legend#links a:hover {
+div.links a:hover {
     color: blanchedalmond;
     text-decoration: underline;
     transition: color 400ms;

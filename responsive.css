@@ -199,15 +199,19 @@
         grid-template-columns: none;
     }
 
-    div legend#desc {
-        display: grid;
+    /* === ABOUT === */
+
+    div.desc {
         grid-template-columns: none;
-        gap: 60px 0;
+        margin: 10px 0;
     }
 
-    div legend#desc p,
-    div legend#desc ul {
-        margin: 0 auto;
+    div.techs {
+        margin-top: 40px;
+    }
+
+    div.wrapper {
+        row-gap: 15%;
     }
 
     /* === MENU === */
