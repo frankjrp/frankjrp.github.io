@@ -1,0 +1,97 @@
+@import "https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap";
+
+:root {
+    --color-background: #5b887f;
+    --color-span-background: #8fbc8f;
+    --color-span-font: #000;
+    --color-span-border: #305030;
+    --color-button: #437043;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-background);
+    font-family: 'Roboto', sans-serif;
+}
+
+div.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 35px;
+    margin-top: 25px;
+}
+
+div.title {
+    width: 240px;
+}
+
+div.title img {
+    width: 100%;
+    border-radius: 6px;
+    filter: brightness(93%);
+    -webkit-filter: brightness(93%);
+    box-shadow: 2px 2px 5px -1px #000;
+    -webkit-box-shadow: 2px 2px 5px -1px #000;
+}
+
+div.apostas {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
+
+div.volante {
+    display: flex;
+    column-gap: 10px;
+}
+
+div.volante span {
+    color: var(--color-span-font);
+    font-size: 18px;
+    border: 2px solid var(--color-span-border);
+    padding: 0.55em 0.56em;
+    border-radius: 100%;
+    background-color: var(--color-span-background);
+}
+
+div.btn-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 12px;
+    margin: 20px 0 50px;
+}
+
+div.btn-wrapper .checkbox {
+    display: flex;
+    align-items: center;
+    column-gap: 4px;
+}
+
+div.btn-wrapper .checkbox label {
+    font-size: 16px;
+}
+
+div.btn-wrapper button {
+    font-family: 'Roboto', sans-serif;
+    color: #f2f2f2;
+    font-size: 16px;
+    width: 130px;
+    padding: 10px 20px;
+    border-radius: 6px;
+    background-color: var(--color-button);
+    transition: background-color 300ms;
+    box-shadow: 0px 0px 8px -1px #000;
+}
+
+div.btn-wrapper button:hover {
+    background-color: #4d804d;
+    cursor: pointer;
+}
