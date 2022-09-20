@@ -1,8 +1,13 @@
-const btn = document.querySelector(".btn-wrapper button")
+const btnGenerate = document.querySelector(".btn-wrapper button.generate")
+const btnPrint = document.querySelector(".btn-wrapper button.print")
 const checkbox = document.querySelector(".checkbox input")
 
-btn.addEventListener("click", () => {
+btnGenerate.addEventListener("click", () => {
     checkbox.checked ? getApostas() : clearAndGetApostas()
+}, false)
+
+btnPrint.addEventListener("click", () => {
+    printApostas()
 }, false)
 
 function getApostas() {
@@ -62,4 +67,36 @@ function clearAndGetApostas() {
     })
 
     getApostas()
+}
+
+function printApostas() {
+    // var divContents = document.querySelectorAll(".apostas .volante span");
+    // let d = 0
+    // var a = window.open();
+
+    // a.document.write('<html>');
+    // a.document.write('<body>');
+    // a.document.write('<head>');
+
+    // a.document.write('<h1>Combinações da Mega Sena</h1>');
+
+    // a.document.write('<div>')
+
+    // divContents.forEach((div) => {
+    //     a.document.write(`<span style="border:1px solid;padding:8px;border-radius:50%">${div.textContent}</span>`)
+    //     d++
+
+    //     if (d === 6) {
+    //         d = 0
+    //         a.document.write("<br><br>")
+    //     }
+    // })
+
+    // a.document.write('</div>')
+
+    // a.document.write('</head></body></html>');
+    // a.document.close();
+    // a.print();
+
+    window.print()
 }
