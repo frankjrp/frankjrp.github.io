@@ -1,5 +1,16 @@
 @media (max-width: 900px) {
 
+    .container.fixed {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+    }
+
+    body.hidden {
+        overflow: hidden;
+    }
+
     header.fixed {
         position: fixed;
         height: 60px;
